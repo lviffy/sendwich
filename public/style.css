@@ -1,0 +1,222 @@
+/* Reset some basic elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-image: radial-gradient(#333 1px, transparent 1px);
+  background-size: 36px 36px;
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+}
+
+h1 {
+  margin-top: 50px;
+  color: #2d7be2;
+  margin-bottom: 100px;
+}
+
+/* Button and input styles */
+button, input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #222; /* Dark input background */
+  color: #e0e0e0;
+}
+
+#sessionInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#sessionKey {
+  background-color: #333;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Chat container and layout */
+#chatContainer {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+#chatWindow {
+  height: 300px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* Message controls */
+.chat-controls, .file-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chat-controls input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+.file-controls input {
+  color: #e0e0e0;
+}
+
+/* System messages inside the chat window */
+.system-message {
+  font-style: italic;
+  color: #888;
+  margin: 5px 0;
+}
+
+/* Session input and join button layout */
+.session-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Status message */
+#status {
+  color: #bbb;
+  margin-top: 15px;
+}
+#sendFile{
+  width: 170px;
+}
+#sessionKeyInput{
+  width: 600px;
+}
+
+/* Message styles */
+.message {
+    background-color: #333;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 5px 0;
+    word-wrap: break-word;
+}
+
+/* Progress bar styles */
+.progress-container {
+    margin: 10px 0;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: #444;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+}
+
+.progress-fill {
+    background-color: #2d7be2;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-label {
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.progress-text {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Connection status styles */
+#status.status-connected {
+    color: #4caf50;
+}
+
+#status.status-disconnected {
+    color: #f44336;
+}
+
+#status.status-error {
+    color: #ff9800;
+}
+
+/* Download link styles */
+.download-container {
+    margin: 10px 0;
+}
+
+.download-link {
+    display: inline-block;
+    background-color: #2d7be2;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #1a5aa8;
+}
+
+.download-icon {
+    margin-right: 5px;
+}
+
+/* Disabled state styles */
+button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+input:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
